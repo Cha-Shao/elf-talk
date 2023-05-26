@@ -1,15 +1,15 @@
 <script setup lang="ts">
 interface Props {
-  value: string;
+  modelValue: string;
   placeholder?: string;
   maxLength?: number;
 }
 
 const props = defineProps<Props>();
-const emits = defineEmits(["update:value"]);
+const emits = defineEmits(["update:modelValue"]);
 
 const handleInput = (e: Event) => {
-  emits("update:value", (e.target as HTMLInputElement).value);
+  emits("update:modelValue", (e.target as HTMLInputElement).value);
 };
 </script>
 
@@ -19,11 +19,11 @@ const handleInput = (e: Event) => {
       <slot name="prefix" />
     </div>
     <input
-      :value="props.value"
+      :value="props.modelValue"
+      @input="handleInput"
       class="w-full flex-grow bg-transparent outline-none"
       :maxLength="props.maxLength"
       :placeholder="props.placeholder"
-      @input="handleInput"
     />
     <div v-if="$slots.suffix">
       <slot name="suffix" />

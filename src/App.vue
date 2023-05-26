@@ -4,8 +4,8 @@ import Footer from "./components/Sidebar.vue";
 
 <template>
   <div class="flex p-2">
-    <Footer />
-    <main class="flex-grow">
+    <Footer class="h-[calc(100vh-1rem)]"/>
+    <main class="flex-grow h-[calc(100vh-1rem)]">
       <RouterView />
     </main>
   </div>

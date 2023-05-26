@@ -10,12 +10,12 @@ const inputPwd = ref<string>("");
 </script>
 
 <template>
-  <div class="flex">
+  <div class="flex h-[calc(100vh-1rem)]">
     <Card title="添加服务器" class="m-auto">
       <p>服务器地址</p>
-      <Input :value="inputUrl" />
+      <Input v-model="inputUrl" />
       <p>服务器密码</p>
-      <Input :value="inputPwd" />
+      <Input v-model="inputPwd" />
       <pre>{{ servers }}</pre>
       <p>{{ inputUrl }}</p>
       <p>{{ inputPwd }}</p>

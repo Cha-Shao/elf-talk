@@ -5,7 +5,7 @@ import { Icon } from "@iconify/vue";
 
 <template>
   <div
-    class="bg-lbg p-2 rounded-2xl w-16 h-[calc(100vh-1rem)] mr-2 grid grid-rows-[1fr_min-content] gap-2"
+    class="bg-lbg p-2 rounded-2xl w-16 mr-2 grid grid-rows-[1fr_min-content] gap-2"
   >
     <div class="flex-grow overflow-x-hidden overflow-y-scroll hide-scroll">
       <RouterLink
